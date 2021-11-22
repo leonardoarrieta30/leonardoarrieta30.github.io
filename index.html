@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/2cb25f2c39.js" crossorigin="anonymous"></script>
+    <title>MechanicToCar</title>
+<!--Load the AJAX API-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+
+  // Load the Visualization API and the corechart package.
+  google.charts.load('current', {'packages':['corechart']});
+
+  // Set a callback to run when the Google Visualization API is loaded.
+  google.charts.setOnLoadCallback(drawChart);
+
+  // Callback that creates and populates a data table,
+  // instantiates the pie chart, passes in the data and
+  // draws it.
+  function drawChart() {
+
+    // Create the data table.
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Topping');
+    data.addColumn('number', 'Slices');
+    data.addRows([
+      ['Enero', 210],
+      ['Febrero', 197],
+      ['Marzo', 187],
+      ['Abril', 154],
+      ['Mayo', 200]
+    ]);
+
+    // Set chart options
+    var options = {'title':'Cantidad de personas promedio que se le malogra el auto mensualmente segun los talleres de reparacion',
+                   'width':500,
+                   'height':500};
+
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+</script>
+</head>
+
+<body>
+    <header>
+        <div class="navp">
+            <div class="Encabezado">
+                <img src="img/logo.png">
+                <h1>Mechanic To Car</h1>
+
+            </div>
+
+            <input type="checkbox" id="check">
+            <label for="check" class="bar-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <nav class="navp-menu">
+                <a href="index.html">Inicio</a>
+                <a href="nosotros.html">Nosotros</a>
+                <a href="index.html#obtener">Obtener</a>
+                <a href="index.html#contacto">Contactanos</a>
+                <a href="Precios.html">Tienda</a>
+            </nav>
+        </div>
+        <section class="Principal">
+            <div class="textos-header">
+
+                <h1>Solicitar ayuda inmediata ahora es mas facil</h1>
+                    <h2>Visualiza en tiempo real los mecanicos mas cercanos y solicia sus servicios en menor tiempo
+                        posible </h2>
+                        <div class="caja">
+                            <div class="logo_referencia">
+                                <img src="img/mobile-regular-84.png">
+                                <p>Siempre contigo</p>
+                            </div>
+                            <div class="logo_referencia">
+                                <img src="img/target-lock-regular-84.png">
+                                <p>En cualquier momento</p>
+
+                            </div>
+                            <div class="logo_referencia">
+                                <img src="img/watch-solid-84.png">
+                                <p>En cualquier lugar</p>
+                            </div>
+                        </div>
+
+            </div>
+
+            <div class="form-registro">
+                <h4>Registrese</h4>
+                <h2>Nombre</h2>
+                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingresa tu nombre"></imput>
+                <h2>Apellidos</h2>
+                <input class="controls" type="text" name="nombres" id="apellidos" placeholder="Ingresa tus apellidos">
+                </imput>
+                <h2>Correo electronico</h2>
+                <input class="controls" type="email" name="nombres" id="correo" placeholder="Ingresa tu correo"></imput>
+                <h2>Contraseña</h2>
+                <input class="controls" type="password" name="nombres" id="contraseña"
+                    placeholder="Ingresa tu contraseña"></imput>
+                <input class="botons" type="submit" value="Registrar">
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <a href="https://api.whatsapp.com/send?phone=51955861447&text=Hola, le escribo para solicitar información de sus productos."
+            class="float" target="_blank">
+            <i class="fa fa-whatsapp my-float"></i>
+        </a>
+
+        <div class="descarga" id="obtener">
+            <div class="cards">
+                <div class="descarga-texto">
+                    <p>No dejes que cualquier incoveniente te detenga. Descargalo ahora!</p>
+                    <p>Disponible en Android e IOS</p>
+                </div>
+
+                <div class="card">
+                    <img src="img/playStore.png">
+                    <div class="contenido-texto-card">
+                        <h4>Descargar</h4>
+                        <a href="https://play.google.com/store?hl=es_PE&gl=US">
+                            <img src="img/downvote-solid-24.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/apple.png">
+                    <div class="contenido-texto-card" href="#">
+                        <h4>Descarga</h4>
+                        <a href="https://www.apple.com/la/app-store/">
+                            <img src="img/downvote-solid-24.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="caracteristicas">
+            <div class="contenedor">
+                <div class="galeria-info">
+
+                    <div class="imagen-info">
+                        <img src="img/seccion_cliente.png">
+                    </div>
+                    <div class="hover-galeria">
+                        <p>En cualquier momento y lugar si necesita ayuda de un profesional
+                            solicitalo desde tu dispositivo movil y el llegara hacia ti en el
+                            menor tiempo posible. Gracias a nuestro funcionalidad de puntuacion
+                            puedes seleccionar a los mejores mecanicos sin preocupaciones
+                        </p>
+                    </div>
+
+                    <div class="imagen-info">
+                        <img src="img/seccion_mecanico.png">
+                    </div>
+                    <div class="hover-galeria">
+                        <p>
+                            Si eres mecanico, obten mayor alcance de tu taller y/o servicios que estas dispuesto
+                            a brindar y recibe solicitudes de clientes para que tu negocio sea todo exito.
+                        </p>
+                    </div>
+
+                    <div class="imagen-info">
+                        <img src="img/seccion_ventas.png">
+                    </div>
+                    <div class="hover-galeria">
+                        <p>
+                            Mantente al tanto de los ultimos porductos automovilistico. Actualizate con
+                            los precios que ofrecen los talleres de reparacion cerca de tu zona.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!--Div that will hold the pie chart-->
+        <div class="contenedor" id="chart_div"></div>
+        <section class="comentarios">
+            <div class="contenedores">
+                <h2 class="titulo">Tu opinion es importante para nosotros</h2>
+                <div class="comentarios-cont">
+                    <div class="comentarios-ind">
+                        <img src="img/cliente1.jpg">
+                        <h3>Rodrigo</h3>
+                        <p>Gracias a esta aplicacion, pude contactar a un mecanico
+                            cuando mas lo necesite. Ahora no tengo preocupacion si
+                            mi auto se daña porque ahora lo podre solicitar al instante
+                        </p>
+                    </div>
+                    <div class="comentarios-ind">
+                        <img src="img/cliente2.jpg">
+                        <h3>Lucas</h3>
+                        <p>Antes no encontraba productos que necesita para mi
+                            vehiculo. Una vez que lo descargue encuentro facilmente
+                            lo que necesito y a un precio accesible.
+                        </p>
+                    </div>
+                    <div class="comentarios-ind">
+                        <img src="img/cliente3.jpg">
+                        <h3>Juan</h3>
+                        <p>Estube por un periodo muy corto sin clientes.
+                            Desde que escuche sobre esta aplicacion he recibido recomendaciones
+                            y solicitudes de muchos clientes. Ahora mi negocio
+                            le va mejor que nunca.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="descarga">
+            <div class="cards">
+                <p>Ellos ya lo probaron no esperes más,descargalo y llevalo a todas partes contigo.
+                </p>
+                <div class="card">
+                    <img src="img/playStore.png">
+                    <div class="contenido-texto-card">
+                        <h4>Descargar</h4>
+                        <a href="https://play.google.com/store?hl=es_PE&gl=US">
+                            <img src="img/downvote-solid-24.png">
+                        </a>                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/apple.png">
+                    <div class="contenido-texto-card">
+                        <h4>Descarga</h4>
+                        <a href="https://www.apple.com/la/app-store/">
+                            <img src="img/downvote-solid-24.png">
+                        </a>                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="contenedor-footer" id="contacto">
+            <section class="form-consultas">
+                <h4>Consultas</h4>
+                <input class="controls" type="email" name="nombres" id="correo" placeholder="Ingrese su correo"></imput>
+                <input class="controls2" type="consulta" name="nombres" id="consulta" placeholder="Escriba su consulta">
+                </imput>
+                <input class="enviar" type="submit" value="Enviar consulta">
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>
